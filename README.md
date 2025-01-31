@@ -20,14 +20,14 @@ The app provides a **user-friendly interface** for sharing files over a network 
 
 | **Technology** | **Purpose** |
 |--------------|------------|
-| **Android (Kotlin/Java)** | Main programming languages for app development. |
+| **Android (Java)** | Main programming languages for app development. |
 | **Firebase Authentication** | Secure user authentication & account management. |
 | **Firebase Firestore** | Stores user metadata and file transaction history. |
 | **AES (Advanced Encryption Standard)** | Encrypts files before transfer for confidentiality. |
 | **RSA (Rivest-Shamir-Adleman)** | Used for secure key exchange. |
 | **SHA-256 (Secure Hash Algorithm)** | Ensures data integrity and verifies file authenticity. |
 | **Sockets (TCP/IP Protocols)** | Enables peer-to-peer file sharing over a network. |
-| **Material UI** | Provides a smooth and modern user interface. |
+| **Figma** | Designed a smooth and modern user interface. |
 | **Retrofit** | API handling for data exchange with Firebase and cloud storage. |
 | **Glide** | Efficient image loading for displaying file previews. |
 
