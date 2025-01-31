@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Secured-File-Sharing-Application</string>
+    <string name="android_sec">Android Secured File Transfer Application</string>
+    <string name="titleText">File Transfer</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="uploading_text">Uploading. . .</string>
+    <string name="decryption_prompt">Enter Decryption Code</string>
+    <string name="decrypted_content_text">Decrypted content will appear here.</string>
+
+    <declare-styleable name="FileTransfer">
+        <attr name="titleText" format="reference"/>
+        <attr name="select_file_button" format="reference"/>
+        <attr name="file_name_text" format="reference"/>
+        <attr name="upload_progress" format="reference"/>
+        <attr name="upload_status_text" format="reference"/>
+        <attr name="decryption_prompt" format="reference"/>
+        <attr name="decryption_code_input" format="reference"/>
+        <attr name="decrypt_button" format="reference"/>
+        <attr name="decryption_progress" format="reference"/>
+        <attr name="decrypted_content_text" format="reference"/>
+        <attr name="dashboard_button" format="reference"/>
+        <attr name="receive_files_button" format="reference"/>
+        <attr name="emailInput" format="reference"/>
+        <attr name="loginTitle" format="reference"/>
+        <attr name="passwordInput" format="reference"/>
+        <attr name="loginButton" format="reference"/>
+        <attr name="signUpRedirect" format="reference"/>
+    </declare-styleable>
+</resources>

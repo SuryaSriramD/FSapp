@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:padding="8dp">
+
+    <!-- Dashboard Title in the Top Center -->
+    <TextView
+        android:id="@+id/top_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Dashboard"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="?attr/colorPrimary"
+        android:padding="16dp"/>
+
+    <!-- Top bar with side-by-side buttons for file sharing and receiving -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar_title"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <!-- File Share Button -->
+        <Button
+            android:id="@+id/btn_file_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Share"
+            android:textColor="#FF000000"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- File Receive Button -->
+        <Button
+            android:id="@+id/btn_file_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Receive"
+            android:textColor="#FF000000"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView to display list of users -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/fab_add_user"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Floating Action Button (FAB) for adding new users/files -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add new user or action"
+        android:backgroundTint="@color/colorAccent"/>
+</RelativeLayout>

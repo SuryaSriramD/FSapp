@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Receive"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="16dp"
+        android:textColor="#000000" />
+
+    <!-- Prompt for Decryption Code -->
+    <TextView
+        android:id="@+id/decryption_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Decryption Code"
+        android:textSize="18sp"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Decryption Code Input -->
+    <EditText
+        android:id="@+id/decryption_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Decryption Code"
+        android:inputType="text"
+        android:layout_below="@id/decryption_prompt"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Decrypt Button -->
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:layout_below="@id/decryption_code_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Progress Bar for Decryption Process -->
+    <ProgressBar
+        android:id="@+id/decryption_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/decrypt_button"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Decrypted Content Display -->
+    <TextView
+        android:id="@+id/decrypted_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/decryption_progress"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="Decrypted content will appear here."/>
+
+    <!-- List of received files -->
+    <ListView
+        android:id="@+id/receivedFilesList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/decrypted_content_text"
+        android:layout_marginTop="20dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:background="#D3D3D3" />
+
+</RelativeLayout>

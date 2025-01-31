@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "605229869432",
+    "project_id": "filesharingapplication-ee965",
+    "storage_bucket": "filesharingapplication-ee965.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605229869432:android:4ddf45cf7d2020ac5f408d",
+        "android_client_info": {
+          "package_name": "com.example.secured_file_sharing_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkttRSw6Fcppb0J-1n5MrMWHeOi4JcEEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
