@@ -1,4 +1,4 @@
-# **🔐 Secured File Sharing Application**
+# **🔐 FSApp | Secured File Sharing Application**
 
 ## **📌 Overview**  
 In today’s digital world, secure file sharing is crucial to protect sensitive information from unauthorized access. This **Secured File Sharing Application** ensures encrypted data transfer between devices, preventing cyber threats, unauthorized access, and data breaches.
