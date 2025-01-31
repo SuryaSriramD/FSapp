@@ -28,8 +28,6 @@ The app provides a **user-friendly interface** for sharing files over a network 
 | **SHA-256 (Secure Hash Algorithm)** | Ensures data integrity and verifies file authenticity. |
 | **Sockets (TCP/IP Protocols)** | Enables peer-to-peer file sharing over a network. |
 | **Figma** | Designed a smooth and modern user interface. |
-| **Retrofit** | API handling for data exchange with Firebase and cloud storage. |
-| **Glide** | Efficient image loading for displaying file previews. |
 
 ---
 
