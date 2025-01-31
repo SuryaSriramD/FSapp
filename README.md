@@ -3,7 +3,7 @@
 ## **📌 Overview**  
 In today’s digital world, secure file sharing is crucial to protect sensitive information from unauthorized access. This **Secured File Sharing Application** ensures encrypted data transfer between devices, preventing cyber threats, unauthorized access, and data breaches.
 
-The app provides a **user-friendly interface** for sharing files over a network while ensuring **end-to-end encryption**. Users can authenticate, select files, and transfer them securely using **cryptographic algorithms** like AES and RSA.
+The app provides a **user-friendly interface** for sharing files over a network while ensuring **end-to-end encryption**. Users can authenticate, select files, and transfer them securely using **cryptographic algorithms** like AES, RSA, and SHA-256.
 
 ---
 
@@ -25,6 +25,7 @@ The app provides a **user-friendly interface** for sharing files over a network 
 | **Firebase Firestore** | Stores user metadata and file transaction history. |
 | **AES (Advanced Encryption Standard)** | Encrypts files before transfer for confidentiality. |
 | **RSA (Rivest-Shamir-Adleman)** | Used for secure key exchange. |
+| **SHA-256 (Secure Hash Algorithm)** | Ensures data integrity and verifies file authenticity. |
 | **Sockets (TCP/IP Protocols)** | Enables peer-to-peer file sharing over a network. |
 | **Material UI** | Provides a smooth and modern user interface. |
 | **Retrofit** | API handling for data exchange with Firebase and cloud storage. |
@@ -58,7 +59,19 @@ byte[] encryptedKey = cipher.doFinal(aesKey.getEncoded());
 
 ---
 
-### **3️⃣ Secure Socket Communication (TCP/IP)**
+### **3️⃣ SHA-256 (Secure Hash Algorithm) – Data Integrity Check**
+- SHA-256 is used to verify file integrity before and after transfer.
+- Helps in detecting any tampering or corruption of files.
+
+```java
+MessageDigest digest = MessageDigest.getInstance("SHA-256");
+byte[] hash = digest.digest(fileBytes);
+String checksum = Base64.getEncoder().encodeToString(hash);
+```
+
+---
+
+### **4️⃣ Secure Socket Communication (TCP/IP)**
 - Uses **Java Sockets** to establish a secure connection between sender and receiver.  
 
 ```java
@@ -86,6 +99,7 @@ SecuredFileSharingApplication/
 │   │   ├── security/
 │   │   │   ├── AESUtils.java
 │   │   │   ├── RSAUtils.java
+│   │   │   ├── HashUtils.java
 │   │   ├── network/
 │   │   │   ├── SocketClient.java
 │   │   │   ├── SocketServer.java
@@ -107,17 +121,16 @@ SecuredFileSharingApplication/
 ### **2️⃣ File Encryption & Sharing**
 - **User selects a file** → Encrypts it using AES-256.  
 - **AES key is encrypted** using RSA (receiver’s public key).  
-- **Encrypted file + encrypted AES key** is sent via **Secure Socket Layer (SSL/TLS)**.  
+- **File checksum is generated** using SHA-256 for integrity verification.  
+- **Encrypted file + encrypted AES key + checksum** is sent via **Secure Socket Layer (SSL/TLS)**.  
 
 ### **3️⃣ File Reception & Decryption**
-- **Receiver gets the encrypted file** and **AES key**.  
+- **Receiver gets the encrypted file**, **AES key**, and **checksum**.  
 - **Decrypts the AES key** using their RSA private key.  
 - **Uses the decrypted AES key** to decrypt the file and restore it.  
+- **Verifies the file integrity** by comparing SHA-256 checksums.  
 
 ---
-
-## **📸 Screenshots**
-
 
 ---
 
@@ -141,7 +154,7 @@ cd FSapp
 ---
 
 ## **📢 Conclusion**
-This **Secured File Sharing Application** provides a **fast, reliable, and secure** way to transfer files between devices. By implementing **AES, RSA, and Secure Socket Layer (SSL/TLS)**, we ensure complete **privacy and protection** from cyber threats.  
+This **Secured File Sharing Application** provides a **fast, reliable, and secure** way to transfer files between devices. By implementing **AES, RSA, SHA-256, and Secure Socket Layer (SSL/TLS)**, we ensure complete **privacy and protection** from cyber threats.  
 
 💡 **_Stay secure, share smart!_** 💡
 
