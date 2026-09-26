@@ -13,3 +13,17 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Web application and local tooling
+web/node_modules/
+web/dist/
+web/test-results/
+web/playwright-report/
+backend/target/
+backend/src/main/resources/static/
+.env
+.env.*
+!.env.example
+.tools/
+.artifacts/
+._*

@@ -1,0 +1,17 @@
+.git
+.gradle
+.idea
+.settings
+app
+gradle
+web/node_modules
+web/dist
+web/test-results
+web/playwright-report
+backend/target
+backend/src/main/resources/static
+.env
+.env.*
+.tools
+.artifacts
+**/._*

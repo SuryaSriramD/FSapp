@@ -1,0 +1,481 @@
+{
+  "recordedAt": "2026-09-14T19:09:11.442Z",
+  "stats": {
+    "startTime": "2026-09-14T19:09:11.442Z",
+    "duration": 113151.096,
+    "expected": 52,
+    "skipped": 5,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "application": "Packaged Java21/SpringBoot4.1.1/Tomcat11.0.25, immutable local JAR, single instance, -Xmx320m, PORT8092, six-digit pairing",
+  "route": "Direct, same host",
+  "projects": [
+    "Chromium153.0.8010.12",
+    "Firefox155.0",
+    "PlaywrightWebKit26.6"
+  ],
+  "pairingAttemptLimits": "Dedicated test server: 1000/address/minute and 1000/global/minute. Production defaults 5/60 separately covered by real HTTP backend tests.",
+  "expectedSkips": {
+    "managedTurnCredentialGate": 3,
+    "restartOnlyRunsInChromium": 2
+  },
+  "scenarios": [
+    {
+      "name": "a real backend restart does not cancel an established file transfer",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a real backend restart does not cancel an established file transfer",
+      "project": "firefox",
+      "status": "skipped",
+      "outcomes": [
+        "skipped"
+      ]
+    },
+    {
+      "name": "a real backend restart does not cancel an established file transfer",
+      "project": "webkit",
+      "status": "skipped",
+      "outcomes": [
+        "skipped"
+      ]
+    },
+    {
+      "name": "transfers an empty file and a Unicode binary batch with explicit per-file consent",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "either device can cancel before the receiver consents",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "cancels while the connection service is waking without reviving the invitation",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "offers a fresh attempt when the connection service cannot create a room",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "accepts a ten-file batch including an exact 100 MiB file",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "rejects too many files and a file above 100 MiB before creating a session",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "checks matching phrases and hides filenames and ICE until sender approval",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "rejecting a phrase match prevents the connection and any filename disclosure",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "mismatched pairing keys fail signaling authentication even if the sender approves",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a consumed pairing code cannot be claimed by a second receiver",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "cancelling a pending real code claim closes the claimed room without reviving either screen",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a cancelled code is invalid for a new receiver",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "the QR shortcut enters the same code flow and clears the fragment immediately",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "keeps a verified file downloadable if the sender leaves before the rest of the batch",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a receiver reload clears the live session and its single-use code",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "navigation and history return do not revive a disposed receiving session",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "mobile layout stays within the viewport and exposes keyboard-accessible controls",
+      "project": "chromium",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "uses managed TURN when relay is explicitly required",
+      "project": "chromium",
+      "status": "skipped",
+      "outcomes": [
+        "skipped"
+      ]
+    },
+    {
+      "name": "transfers an empty file and a Unicode binary batch with explicit per-file consent",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "either device can cancel before the receiver consents",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "cancels while the connection service is waking without reviving the invitation",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "offers a fresh attempt when the connection service cannot create a room",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "accepts a ten-file batch including an exact 100 MiB file",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "rejects too many files and a file above 100 MiB before creating a session",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "checks matching phrases and hides filenames and ICE until sender approval",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "rejecting a phrase match prevents the connection and any filename disclosure",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "mismatched pairing keys fail signaling authentication even if the sender approves",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a consumed pairing code cannot be claimed by a second receiver",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "cancelling a pending real code claim closes the claimed room without reviving either screen",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a cancelled code is invalid for a new receiver",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "the QR shortcut enters the same code flow and clears the fragment immediately",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "keeps a verified file downloadable if the sender leaves before the rest of the batch",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a receiver reload clears the live session and its single-use code",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "navigation and history return do not revive a disposed receiving session",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "mobile layout stays within the viewport and exposes keyboard-accessible controls",
+      "project": "firefox",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "uses managed TURN when relay is explicitly required",
+      "project": "firefox",
+      "status": "skipped",
+      "outcomes": [
+        "skipped"
+      ]
+    },
+    {
+      "name": "transfers an empty file and a Unicode binary batch with explicit per-file consent",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "either device can cancel before the receiver consents",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "cancels while the connection service is waking without reviving the invitation",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "offers a fresh attempt when the connection service cannot create a room",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "accepts a ten-file batch including an exact 100 MiB file",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "rejects too many files and a file above 100 MiB before creating a session",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "checks matching phrases and hides filenames and ICE until sender approval",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "rejecting a phrase match prevents the connection and any filename disclosure",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "mismatched pairing keys fail signaling authentication even if the sender approves",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a consumed pairing code cannot be claimed by a second receiver",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "cancelling a pending real code claim closes the claimed room without reviving either screen",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a cancelled code is invalid for a new receiver",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "the QR shortcut enters the same code flow and clears the fragment immediately",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "keeps a verified file downloadable if the sender leaves before the rest of the batch",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "a receiver reload clears the live session and its single-use code",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "navigation and history return do not revive a disposed receiving session",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "mobile layout stays within the viewport and exposes keyboard-accessible controls",
+      "project": "webkit",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "name": "uses managed TURN when relay is explicitly required",
+      "project": "webkit",
+      "status": "skipped",
+      "outcomes": [
+        "skipped"
+      ]
+    }
+  ]
+}

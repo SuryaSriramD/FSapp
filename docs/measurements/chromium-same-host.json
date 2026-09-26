@@ -1,0 +1,734 @@
+{
+  "schemaVersion": 2,
+  "recordedAt": "2026-09-14T19:11:26.593Z",
+  "completed": true,
+  "environment": {
+    "baseURL": "http://127.0.0.1:8092",
+    "browser": "153.0.8010.12",
+    "platform": "darwin",
+    "osRelease": "25.6.0",
+    "arch": "arm64",
+    "cpu": "Apple M4",
+    "totalSystemMemoryBytes": 25769803776,
+    "node": "v24.19.0",
+    "topology": "Two isolated desktop Chromium contexts in one dedicated browser process tree on one host; packaged Spring application on loopback HTTP.",
+    "serviceState": "Warm service: an application health check completes before timing starts. These figures do not include a managed-host cold start.",
+    "receivingStorage": "Single-file Blob fallback explicitly selected using save=download.",
+    "concurrentSystemWorkload": "Not controlled. Other applications and test jobs may be running; their RSS is excluded but CPU contention is possible."
+  },
+  "methodology": {
+    "repetitionsPerSize": 1,
+    "pairing": "Monotonic elapsed time from clicking Create pairing code through numeric code entry, matching phrase verification and automated sender approval to receiver file consent becoming visible. Navigation-to-consent and approval-to-consent are reported separately. No human decision delay is represented.",
+    "transfer": "Monotonic elapsed time from clicking Accept file until Received and verified is visible. Includes browser UI/automation latency; excludes subsequent download/export and comparison.",
+    "dataChannel": "Sender RTCDataChannel.send is transparently observed. Native bufferedAmount is read immediately after each send, recording exact observed peaks without periodic-sampling aliasing.",
+    "rss": "Every 250 ms, ps reports resident-set KiB for only this script-owned Chromium root PID and descendants. Sum converted to bytes; shared resident pages may be counted more than once. Node, Java, and other Chromium instances are excluded.",
+    "jsHeap": "Optional Runtime.getHeapUsage.usedSize per page through CDP. This excludes Blob/file payload storage, off-heap/native WebRTC buffers, and other browser processes. It is not total memory.",
+    "cleanup": "Memory is sampled one second after explicit UI file release and after contexts close. No forced garbage collection; a lack of immediate RSS reduction does not establish a leak.",
+    "limitations": "One same-host desktop run is not evidence of internet throughput, TURN performance, physical phone/Safari behavior, or a universal/mobile memory bound. Instrumentation and sampling add overhead."
+  },
+  "pairing": {
+    "mode": "single-use-six-digit-code-with-sender-approval",
+    "createToConsentMs": 495,
+    "receiverNavigationToConsentMs": 384,
+    "approvalToConsentMs": 83
+  },
+  "transfers": [
+    {
+      "name": "pattern-1-MiB.bin",
+      "sizeBytes": 1048576,
+      "acceptToVerifiedMs": 120,
+      "observedMiBPerSecond": 8.33,
+      "route": "direct",
+      "download": {
+        "bytes": 1048576,
+        "sha256": "92cc588b56c10f75193d17749a6bd8d04db79bb769e4170f35e0dbe7b40a574d",
+        "byteIdentical": true
+      },
+      "dataChannel": {
+        "binaryFrames": 65,
+        "payloadBytes": 1048576,
+        "maxRtcBufferedBytes": 49152
+      },
+      "sampledTransferPeaks": {
+        "sampleCount": 2,
+        "browserTreeRssBytes": 603570176,
+        "senderJsHeapUsedBytes": 5153612,
+        "receiverJsHeapUsedBytes": 4766092
+      }
+    },
+    {
+      "name": "pattern-100-MiB.bin",
+      "sizeBytes": 104857600,
+      "acceptToVerifiedMs": 10177,
+      "observedMiBPerSecond": 9.83,
+      "route": "direct",
+      "download": {
+        "bytes": 104857600,
+        "sha256": "f40a9ae93c5834412608c22588f49877c4c1b061f6bd42391e6250016b9ed76b",
+        "byteIdentical": true
+      },
+      "dataChannel": {
+        "binaryFrames": 6407,
+        "payloadBytes": 104857600,
+        "maxRtcBufferedBytes": 49152
+      },
+      "sampledTransferPeaks": {
+        "sampleCount": 38,
+        "browserTreeRssBytes": 907509760,
+        "senderJsHeapUsedBytes": 11688440,
+        "receiverJsHeapUsedBytes": 11326220
+      }
+    }
+  ],
+  "memorySamples": [
+    {
+      "elapsedMs": 20,
+      "phase": "browser-started",
+      "browserTreeRssBytes": 151928832,
+      "browserProcessCount": 3,
+      "senderJsHeapUsedBytes": null,
+      "receiverJsHeapUsedBytes": null
+    },
+    {
+      "elapsedMs": 298,
+      "phase": "browser-started",
+      "browserTreeRssBytes": 392740864,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 2312884,
+      "receiverJsHeapUsedBytes": 534528
+    },
+    {
+      "elapsedMs": 540,
+      "phase": "browser-started",
+      "browserTreeRssBytes": 410992640,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 2384644,
+      "receiverJsHeapUsedBytes": 534528
+    },
+    {
+      "elapsedMs": 794,
+      "phase": "browser-started",
+      "browserTreeRssBytes": 411041792,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 2384644,
+      "receiverJsHeapUsedBytes": 534528
+    },
+    {
+      "elapsedMs": 1061,
+      "phase": "browser-started",
+      "browserTreeRssBytes": 411500544,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 2384644,
+      "receiverJsHeapUsedBytes": 534528
+    },
+    {
+      "elapsedMs": 1317,
+      "phase": "pairing",
+      "browserTreeRssBytes": 427835392,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 3442656,
+      "receiverJsHeapUsedBytes": 534528
+    },
+    {
+      "elapsedMs": 1573,
+      "phase": "pairing",
+      "browserTreeRssBytes": 536166400,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 4865592,
+      "receiverJsHeapUsedBytes": 2584512
+    },
+    {
+      "elapsedMs": 1754,
+      "phase": "paired",
+      "browserTreeRssBytes": 581468160,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5319900,
+      "receiverJsHeapUsedBytes": 3908516
+    },
+    {
+      "elapsedMs": 1848,
+      "phase": "transferring-1-MiB",
+      "browserTreeRssBytes": 588169216,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5010136,
+      "receiverJsHeapUsedBytes": 4766092
+    },
+    {
+      "elapsedMs": 1896,
+      "phase": "transferring-1-MiB",
+      "browserTreeRssBytes": 603570176,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5153612,
+      "receiverJsHeapUsedBytes": 4485852
+    },
+    {
+      "elapsedMs": 1983,
+      "phase": "downloading-1-MiB",
+      "browserTreeRssBytes": 607109120,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184252,
+      "receiverJsHeapUsedBytes": 4636776
+    },
+    {
+      "elapsedMs": 2066,
+      "phase": "released-1-MiB",
+      "browserTreeRssBytes": 607764480,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "elapsedMs": 2344,
+      "phase": "released-1-MiB",
+      "browserTreeRssBytes": 607764480,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "elapsedMs": 2660,
+      "phase": "released-1-MiB",
+      "browserTreeRssBytes": 607797248,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "elapsedMs": 2819,
+      "phase": "released-1-MiB",
+      "browserTreeRssBytes": 607797248,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "elapsedMs": 3049,
+      "phase": "released-1-MiB",
+      "browserTreeRssBytes": 607879168,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "elapsedMs": 3068,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 607879168,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "elapsedMs": 3381,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 636977152,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5763268,
+      "receiverJsHeapUsedBytes": 5014968
+    },
+    {
+      "elapsedMs": 3617,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 662781952,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6166984,
+      "receiverJsHeapUsedBytes": 4663884
+    },
+    {
+      "elapsedMs": 3874,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 687013888,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6192368,
+      "receiverJsHeapUsedBytes": 5672444
+    },
+    {
+      "elapsedMs": 4337,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 709165056,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7218668,
+      "receiverJsHeapUsedBytes": 4140212
+    },
+    {
+      "elapsedMs": 4721,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 718897152,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6631924,
+      "receiverJsHeapUsedBytes": 5356900
+    },
+    {
+      "elapsedMs": 4991,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 724713472,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6382272,
+      "receiverJsHeapUsedBytes": 5755580
+    },
+    {
+      "elapsedMs": 5170,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 723943424,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7254608,
+      "receiverJsHeapUsedBytes": 5952392
+    },
+    {
+      "elapsedMs": 5460,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 725696512,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7499444,
+      "receiverJsHeapUsedBytes": 4793332
+    },
+    {
+      "elapsedMs": 5783,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 725090304,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7739520,
+      "receiverJsHeapUsedBytes": 4480336
+    },
+    {
+      "elapsedMs": 5952,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 719601664,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5340440,
+      "receiverJsHeapUsedBytes": 4455264
+    },
+    {
+      "elapsedMs": 6161,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 720060416,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5521988,
+      "receiverJsHeapUsedBytes": 4111788
+    },
+    {
+      "elapsedMs": 6412,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 723140608,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7378956,
+      "receiverJsHeapUsedBytes": 4580472
+    },
+    {
+      "elapsedMs": 6660,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 726056960,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7025360,
+      "receiverJsHeapUsedBytes": 5412612
+    },
+    {
+      "elapsedMs": 6942,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 722272256,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5980376,
+      "receiverJsHeapUsedBytes": 6196836
+    },
+    {
+      "elapsedMs": 7166,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 719126528,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5863392,
+      "receiverJsHeapUsedBytes": 5403112
+    },
+    {
+      "elapsedMs": 7420,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 722534400,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5228860,
+      "receiverJsHeapUsedBytes": 4652292
+    },
+    {
+      "elapsedMs": 7666,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 725549056,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6160856,
+      "receiverJsHeapUsedBytes": 4308992
+    },
+    {
+      "elapsedMs": 7921,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 731070464,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5988892,
+      "receiverJsHeapUsedBytes": 5386604
+    },
+    {
+      "elapsedMs": 8169,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 729415680,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5158992,
+      "receiverJsHeapUsedBytes": 5489796
+    },
+    {
+      "elapsedMs": 8418,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 732233728,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7498136,
+      "receiverJsHeapUsedBytes": 6346768
+    },
+    {
+      "elapsedMs": 8671,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 735674368,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 8670012,
+      "receiverJsHeapUsedBytes": 4546680
+    },
+    {
+      "elapsedMs": 8943,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 739966976,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 11235264,
+      "receiverJsHeapUsedBytes": 5656748
+    },
+    {
+      "elapsedMs": 9177,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 743620608,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5208308,
+      "receiverJsHeapUsedBytes": 6538876
+    },
+    {
+      "elapsedMs": 9419,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 746946560,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7233716,
+      "receiverJsHeapUsedBytes": 6577436
+    },
+    {
+      "elapsedMs": 9675,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 749715456,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 4849800,
+      "receiverJsHeapUsedBytes": 5995264
+    },
+    {
+      "elapsedMs": 9924,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 752861184,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6800788,
+      "receiverJsHeapUsedBytes": 6167756
+    },
+    {
+      "elapsedMs": 10180,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 756727808,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 11688440,
+      "receiverJsHeapUsedBytes": 5618348
+    },
+    {
+      "elapsedMs": 10427,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 752680960,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 8659420,
+      "receiverJsHeapUsedBytes": 6291316
+    },
+    {
+      "elapsedMs": 10677,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 756023296,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5765380,
+      "receiverJsHeapUsedBytes": 6289376
+    },
+    {
+      "elapsedMs": 10930,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 759447552,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 8539984,
+      "receiverJsHeapUsedBytes": 5954508
+    },
+    {
+      "elapsedMs": 11174,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 763248640,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5938304,
+      "receiverJsHeapUsedBytes": 5273296
+    },
+    {
+      "elapsedMs": 11446,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 762675200,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 9421184,
+      "receiverJsHeapUsedBytes": 8408876
+    },
+    {
+      "elapsedMs": 11676,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 765034496,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 6266100,
+      "receiverJsHeapUsedBytes": 7053396
+    },
+    {
+      "elapsedMs": 12719,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 741343232,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7673132,
+      "receiverJsHeapUsedBytes": 5210612
+    },
+    {
+      "elapsedMs": 13177,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 692469760,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 10097168,
+      "receiverJsHeapUsedBytes": 11326220
+    },
+    {
+      "elapsedMs": 13355,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 878952448,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7024624,
+      "receiverJsHeapUsedBytes": 7384564
+    },
+    {
+      "elapsedMs": 13403,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 907509760,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7024624,
+      "receiverJsHeapUsedBytes": 7384564
+    },
+    {
+      "elapsedMs": 13498,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 928628736,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7535116
+    },
+    {
+      "elapsedMs": 13736,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 924729344,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 13976,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 924139520,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 14218,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 923516928,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 14468,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 923516928,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 14712,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 923516928,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 15000,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 922877952,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 15005,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 922877952,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "elapsedMs": 15219,
+      "phase": "released-100-MiB",
+      "browserTreeRssBytes": 923123712,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7754668
+    },
+    {
+      "elapsedMs": 15482,
+      "phase": "released-100-MiB",
+      "browserTreeRssBytes": 923123712,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7754668
+    },
+    {
+      "elapsedMs": 15735,
+      "phase": "released-100-MiB",
+      "browserTreeRssBytes": 923123712,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7754668
+    },
+    {
+      "elapsedMs": 15987,
+      "phase": "released-100-MiB",
+      "browserTreeRssBytes": 923123712,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7754668
+    },
+    {
+      "elapsedMs": 16057,
+      "phase": "released-100-MiB",
+      "browserTreeRssBytes": 923123712,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7754668
+    },
+    {
+      "elapsedMs": 17119,
+      "phase": "contexts-closed",
+      "browserTreeRssBytes": 201408512,
+      "browserProcessCount": 3,
+      "senderJsHeapUsedBytes": null,
+      "receiverJsHeapUsedBytes": null
+    }
+  ],
+  "checkpoints": [
+    {
+      "name": "browser-started",
+      "elapsedMs": 20,
+      "phase": "browser-started",
+      "browserTreeRssBytes": 151928832,
+      "browserProcessCount": 3,
+      "senderJsHeapUsedBytes": null,
+      "receiverJsHeapUsedBytes": null
+    },
+    {
+      "name": "paired-before-transfer",
+      "elapsedMs": 1754,
+      "phase": "paired",
+      "browserTreeRssBytes": 581468160,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5319900,
+      "receiverJsHeapUsedBytes": 3908516
+    },
+    {
+      "name": "pattern-1-MiB.bin-verified",
+      "elapsedMs": 1896,
+      "phase": "transferring-1-MiB",
+      "browserTreeRssBytes": 603570176,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5153612,
+      "receiverJsHeapUsedBytes": 4485852
+    },
+    {
+      "name": "pattern-1-MiB.bin-download-compared",
+      "elapsedMs": 1983,
+      "phase": "downloading-1-MiB",
+      "browserTreeRssBytes": 607109120,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184252,
+      "receiverJsHeapUsedBytes": 4636776
+    },
+    {
+      "name": "pattern-1-MiB.bin-one-second-after-release",
+      "elapsedMs": 3049,
+      "phase": "released-1-MiB",
+      "browserTreeRssBytes": 607879168,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 5184276,
+      "receiverJsHeapUsedBytes": 4830464
+    },
+    {
+      "name": "pattern-100-MiB.bin-verified",
+      "elapsedMs": 13403,
+      "phase": "transferring-100-MiB",
+      "browserTreeRssBytes": 907509760,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7024624,
+      "receiverJsHeapUsedBytes": 7384564
+    },
+    {
+      "name": "pattern-100-MiB.bin-download-compared",
+      "elapsedMs": 15005,
+      "phase": "downloading-100-MiB",
+      "browserTreeRssBytes": 922877952,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7556704
+    },
+    {
+      "name": "pattern-100-MiB.bin-one-second-after-release",
+      "elapsedMs": 16057,
+      "phase": "released-100-MiB",
+      "browserTreeRssBytes": 923123712,
+      "browserProcessCount": 5,
+      "senderJsHeapUsedBytes": 7055444,
+      "receiverJsHeapUsedBytes": 7754668
+    },
+    {
+      "name": "one-second-after-contexts-close",
+      "elapsedMs": 17119,
+      "phase": "contexts-closed",
+      "browserTreeRssBytes": 201408512,
+      "browserProcessCount": 3,
+      "senderJsHeapUsedBytes": null,
+      "receiverJsHeapUsedBytes": null
+    }
+  ],
+  "applicationAssets": [
+    "/assets/index-BpUMDmqc.js"
+  ],
+  "transport": {
+    "channelCount": 1,
+    "maxRtcBufferedBytes": 49152,
+    "binaryFrames": 6472,
+    "maxBinaryFrameBytes": 16384,
+    "files": {
+      "0": {
+        "binaryFrames": 65,
+        "payloadBytes": 1048576,
+        "maxRtcBufferedBytes": 49152
+      },
+      "1": {
+        "binaryFrames": 6407,
+        "payloadBytes": 104857600,
+        "maxRtcBufferedBytes": 49152
+      }
+    },
+    "route": "direct"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "application": "fsapp:local six-digit pairing Docker image",
+  "runtime": {
+    "port": 9091,
+    "hostPort": 8093,
+    "memoryLimitMiB": 512,
+    "cpuLimit": 1,
+    "uid": 999
+  },
+  "browserSmoke": "Chromium153: empty, Unicode and binary batch with code entry, phrase approval, per-file consent, byte-identical downloads",
+  "health": {
+    "groups": [
+      "liveness",
+      "readiness"
+    ],
+    "status": "UP"
+  },
+  "defaultPairingLimits": {
+    "perAddressPerMinute": 5,
+    "globalPerMinute": 60,
+    "sixInvalidAttemptStatusesAfterBrowserSmoke": [
+      404,
+      404,
+      404,
+      404,
+      429,
+      429
+    ]
+  },
+  "note": "Code attempt counts can cross a minute-window boundary; expected only generic404 and eventually429. Dedicated verification container; public demo limits were not raised.",
+  "shutdown": {
+    "gracefulShutdownLogged": true,
+    "exitCode": 143,
+    "oomKilled": false
+  },
+  "recordedAt": "2026-09-14T19:13:51.709770+00:00"
+}

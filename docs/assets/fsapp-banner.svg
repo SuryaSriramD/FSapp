@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1184" height="380" viewBox="0 0 1184 380" role="img" aria-labelledby="title description">
+  <title id="title">FSApp — Your files. Six digits away.</title>
+  <desc id="description">Browser-to-browser file sharing with six-digit pairing and sender approval. An illustration connects a computer and phone beside the example pairing code 012 345.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfcf6"/>
+      <stop offset="1" stop-color="#eaf1e5"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#346f5f"/>
+      <stop offset="1" stop-color="#1c463d"/>
+    </linearGradient>
+    <clipPath id="canvas-clip"><rect width="1184" height="380" rx="28"/></clipPath>
+  </defs>
+  <g clip-path="url(#canvas-clip)">
+    <rect width="1184" height="380" fill="url(#canvas)"/>
+    <circle cx="940" cy="152" r="266" fill="#dce9d6" opacity=".42"/>
+    <circle cx="940" cy="152" r="211" fill="none" stroke="#cbdcc5" opacity=".6"/>
+    <circle cx="940" cy="152" r="160" fill="none" stroke="#cbdcc5" opacity=".6"/>
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <path d="M56 56h34" stroke="#577b60" stroke-width="4" stroke-linecap="round"/>
+      <text x="56" y="94" font-size="13" font-weight="600" letter-spacing="2.1" fill="#647960">FILES, FROM BROWSER TO BROWSER</text>
+      <text x="52" y="173" font-size="72" font-weight="700" letter-spacing="-3" fill="#1c3330">FSApp<tspan fill="#577b60">.</tspan></text>
+      <text x="56" y="221" font-size="26" fill="#456552">Your files. Six digits away.</text>
+      <g font-size="13" font-weight="500" fill="#3e614d">
+        <rect x="56" y="272" width="132" height="35" rx="17.5" fill="#fffefa" fill-opacity=".8" stroke="#d4dfcd"/>
+        <text x="122" y="294.5" text-anchor="middle">Six-digit pairing</text>
+        <rect x="198" y="272" width="143" height="35" rx="17.5" fill="#fffefa" fill-opacity=".8" stroke="#d4dfcd"/>
+        <text x="269.5" y="294.5" text-anchor="middle">Sender approval</text>
+        <rect x="351" y="272" width="115" height="35" rx="17.5" fill="#fffefa" fill-opacity=".8" stroke="#d4dfcd"/>
+        <text x="408.5" y="294.5" text-anchor="middle">Verified files</text>
+      </g>
+    </g>
+    <g transform="translate(661 83) rotate(-5 111 90)">
+      <rect x="14" y="14" width="216" height="159" rx="17" fill="#244333" opacity=".06"/>
+      <rect x="14" y="6" width="216" height="159" rx="17" fill="#fffefa" stroke="#baccb3" stroke-width="1.5"/>
+      <rect x="25" y="17" width="194" height="132" rx="9" fill="url(#screen)"/>
+      <circle cx="122" cy="11.5" r="1.8" fill="#9bb299"/>
+      <path d="M0 164h244l-11 12a9 9 0 0 1-7 3H18a9 9 0 0 1-7-3Z" fill="#e8efdf" stroke="#baccb3" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M96 164h52l-5 6h-42Z" fill="#b9cdb1"/>
+      <rect x="91" y="44" width="57" height="70" rx="7" fill="#f2f7ed"/>
+      <path d="M132 44v16h16" fill="#bfdbc3"/>
+      <path d="M105 77h29m-29 10h29m-29 10h19" stroke="#799a7d" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="151" cy="111" r="17" fill="#8cbb9c" stroke="#2b5c4c" stroke-width="3"/>
+      <path d="m143 111 5 5 10-11" fill="none" stroke="#173f33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(1001 58) rotate(8 47 93)">
+      <rect x="1" y="8" width="100" height="188" rx="23" fill="#244333" opacity=".07"/>
+      <rect width="100" height="188" rx="23" fill="#fffefa" stroke="#baccb3" stroke-width="1.5"/>
+      <rect x="8" y="9" width="84" height="169" rx="16" fill="#e7efdf"/>
+      <rect x="32" y="15" width="36" height="5" rx="2.5" fill="#95ae91"/>
+      <rect x="28" y="62" width="43" height="54" rx="6" fill="#326854"/>
+      <path d="M57 62v14h14" fill="#67957b"/>
+      <path d="M38 88h22m-22 9h16" stroke="#d7e9d4" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M36 168h28" stroke="#95ae91" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <path d="M891 168c33 0 55-8 100-35" fill="none" stroke="#769878" stroke-width="1.8" stroke-dasharray="3 6" stroke-linecap="round"/>
+    <circle cx="946" cy="152" r="24" fill="#eaf1e5"/>
+    <circle cx="946" cy="152" r="19" fill="#fafff4" stroke="#bbd0b3"/>
+    <path d="M938 147h15m-4-4 4 4-4 4m5 6h-15m4-4-4 4 4 4" fill="none" stroke="#527a5a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <rect x="813" y="273" width="253" height="67" rx="15" fill="#fffefa" stroke="#c4d5bc"/>
+      <text x="940" y="293" text-anchor="middle" font-size="9" font-weight="600" letter-spacing="1.6" fill="#69815f">PAIRING CODE · EXAMPLE</text>
+      <text x="942" y="324" text-anchor="middle" font-size="28" font-weight="600" letter-spacing="5" fill="#235e50">012 345</text>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="1183" height="379" rx="27.5" fill="none" stroke="#dce5d5"/>
+</svg>

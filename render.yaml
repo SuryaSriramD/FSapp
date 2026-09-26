@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: fsapp
+    runtime: docker
+    plan: free
+    numInstances: 1
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: 'off'
+    envVars:
+      - key: FSAPP_PUBLIC_ORIGIN
+        sync: false
+      - key: FSAPP_TURN_ENABLED
+        value: 'false'
+      - key: FSAPP_TURN_KEY_ID
+        sync: false
+      - key: FSAPP_TURN_API_TOKEN
+        sync: false
+      - key: FSAPP_MAX_ROOMS
+        value: '500'
+      - key: JAVA_TOOL_OPTIONS
+        value: '-XX:MaxRAMPercentage=60.0 -XX:+ExitOnOutOfMemoryError'
